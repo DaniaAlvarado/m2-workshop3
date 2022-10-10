@@ -4,7 +4,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "/src/index.js", // main js
+  entry: "/src/index.js",
+  devServer: {
+    port: 3000,
+  }, // main js
   output: {
     path: path.resolve(__dirname, "build"), // output folder
     publicPath: "/",
@@ -31,6 +34,20 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(svg|png|jpg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'src/app/images/[name].[ext]',
+              name: 'src/app/images/desktop[name].[ext]',
+              name: 'src/app/images/mobile[name].[ext]'
+            }
+
+          }
+        ]
       },
     ],
   },
