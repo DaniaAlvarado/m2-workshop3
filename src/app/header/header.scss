@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$primary-color: hsl(0, 0%, 100%);
+$secundary-color:hsl(0, 0%, 0%);
+$font-family: 'Alata', sans-serif;
+$font-family2:'Josefin Sans', sans-serif;
+
+header{
+    display: flex;
+    height: 800px;
+    background-color: aquamarine;
+    //background:url(../images/desktop/image-hero.jpg) ;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    aside{
+        width: 50%;
+        padding: 100px 0 0 5%;
+    }
+    &__title{
+        width: fit-content;
+        border: 2px solid $primary-color;
+        background-color: transparent;
+        padding: 30px;        
+        h1{
+            font-family: $font-family;
+            font-weight: 400;
+            color: $primary-color;
+            font-size: 60px;
+        }
+    }
+    &__hamburguer{
+        display: none;
+    }
+    &__logo{
+        display: flex;
+       
+    }
+    
+    &__nav{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        // margin: 10% 10% 10% 10%;
+         padding: 50px 5% 50px 5%;
+        ul{
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            li{
+                font-family: $font-family2;
+                color: $primary-color;
+                font-size: 30px;
+                font-weight: 700;
+                cursor: pointer;
+               
+                &:hover{
+                    text-decoration: underline 4px  solid $primary-color ;
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:975px) {
+    .header{
+        aside{
+            justify-content: center;
+        }
+        &__title{
+            h1{
+                font-size: 45px;
+            }
+        }
+        
+        &__hamburguer{
+            display: block;
+        }
+        &__link{
+            display: none;
+        }
+    }
+}
+
