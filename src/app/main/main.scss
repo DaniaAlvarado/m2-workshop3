@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+$font-family: 'Alata', sans-serif;
+$font-family2:'Josefin Sans', sans-serif;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 5% 100px 5%;
+    background-color: white;
+    &__info{
+        width: 100%;
+        display: flex;
+        figure img{
+            width: 100%;
+        }
+    }
+    &__text{
+        width: 50%;
+        height: 40%;
+        margin-top: 16%;
+        transform: translateX(-140px);
+        background-color: white;
+        padding: 60px 60px 0 60px;
+        line-height: 25px;
+        span{
+            font-size: 30px;
+            font-family: $font-family;
+        }
+        p{
+            color: $darkGray;
+            font-size: 15px;
+            font-family: $font-family2;
+        }
+    }
+    &__section{
+        width: 100%;
+        margin-top: 100px;
+        nav{
+            display: flex;
+            padding: 50px 0 50px 0;
+            justify-content: space-between;
+            span{
+                font-size: 30px;
+                font-family: $font-family;
+            }
+            button{
+                border: 1px solid black;
+                width: 100px;
+                padding: 5px;
+                font-family: $font-family2;
+                background-color: transparent;
+                &:hover{
+                    cursor: pointer;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+        article{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            .imgs:hover{
+                cursor: pointer;
+                opacity: 30%;
+            }
+        }
+    }
+}
